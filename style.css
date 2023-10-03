@@ -34,115 +34,6 @@
     margin-bottom: 4px;
 }
 
-/*-------------------------------------------------*/
-/* Info.html styling */
-
-/* body background image */
-.info-page {
-    background-color: rgba(75, 19, 128, 0.699);
-    background-size: cover;
-}
-
-/* Footer Styles (match index.html) */
-footer {
-    background-color: #007acc;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Features Section Styles */
-.features {
-    background: transparent;
-    color: white;
-    padding: 20px;
-    margin: 20px;
-    margin-left:700px;
-    margin-top:100px;
-    max-width: 50%;
-    align-items: center;
-    flex-direction: column;
-}
-
-.features h2 {
-    font-size: 50px;
-    font-family: gopher;
-    color: white;
-}
-
-.features ul {
-    font-size: 25px;
-    padding-left: 20px;
-    margin-top: 20px;
-}
-
-body.info-page {
-    display: flex; /* Enable flex layout for the body of the info page */
-    flex-direction: column; /* Reverse the order of elements (Features on the right) */
-    align-items: center;
-    justify-content: space-between; /* Space between Features and other content */
-    align-items: flex-start; /* Align Features section to the top */
-}
-
-@media (max-width: 768px) {
-    .features {
-        max-width: 100%; /* Allow full width for smaller screens */
-    }
-}
-
-/* About Us and FAQ Sections Styles (customize for info.html) */
-.about-us,
-.faq {
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color is white */
-    padding: 20px;
-    margin: 20px;
-    max-width: 80%; /* Adjust the maximum width as needed */
-}
-
-/* Match the font used in index.html (if different) */
-.about-us {
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color is white */
-    padding: 20px;
-    margin: 20px;
-    margin-top: 100px;
-    max-width: 100%; /* Adjust the maximum width as needed */
-}
-
-.about-us h1 {
-    font-family: gopher;
-    color: white; 
-}
-
-.about-us p {
-    margin-top: 25px;
-}
-
-/*Faq Section styling */
-
-.faq {
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color is white */
-    padding: 20px;
-    margin: 20px;
-    max-width: 80%; /* Adjust the maximum width as needed */
-}
-
-.faq h2 {
-    font-family: gopher;
-    color: white;
-}
-
-/* Add hover effect for links in the FAQ section */
-.faq-item {
-    margin-bottom: 20px;
-}
-
-
 .navlinks {
     list-style-type: none;
     display: flex;
@@ -211,4 +102,142 @@ body.info-page {
     .text-container {
         flex: 1; 
     }
+}
+
+
+/*-------------------------------------------------*/
+/* Info.html styling */
+
+/*Star image and music sharing image*/
+.starimage, 
+.musicsharingimage {
+   width: 30%;
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+   margin-left: 100px;
+   margin-top: 100px;
+}
+
+/* body background image */
+.info-page {
+    background-color: rgba(75, 19, 128, 0.699);
+    background-size: cover;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Features Section Styles */
+.features,
+.features2 {
+    background: transparent;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 100px;
+    width: 50%;
+    max-width: calc(100%-120px);
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+
+.features2 {
+    top: 600px;
+}
+
+.features h1,
+.features2 h2 {
+    font-size: 50px;
+    font-family: gopher;
+    color: white;
+}
+
+.features ul {
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.features2 ul {
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+body.info-page {
+    display: flex; /* Enable flex layout for the body of the info page */
+    flex-direction: column; /* Reverse the order of elements (Features on the right) */
+    align-items: center;
+    justify-content: space-between; /* Space between Features and other content */
+    align-items: flex-start; /* Align Features section to the top */
+}
+
+@media (max-width: 768px) {
+    .features {
+        max-width: 100%; /* Allow full width for smaller screens */
+    }
+}
+
+/* About Us and FAQ Sections Styles (customize for info.html) */
+
+/* Match the font used in index.html (if different) */
+.about-us {
+    background-color: mediumslateblue; /* Transparent background */
+    color: white; /* Text color is white */
+    padding: 20px;
+    margin: 20px;
+    margin-top: 100px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    max-width: 100%; /* Adjust the maximum width as needed */
+}
+
+.about-us h3 {
+    font-family: gopher;
+    color: white; 
+}
+
+.about-us p {
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .features {
+        width: 100%; /* Allow full width for smaller screens */
+        max-width: 100%;
+        float: none;
+    }
+    
+    .about-us {
+        position: static;
+        margin-top: 20px;
+        bottom: auto;
+    }
+}
+
+/*Faq Section styling */
+
+.faq {
+    background-color: transparent; /* Transparent background */
+    color: white; /* Text color is white */
+    padding: 20px;
+    margin: 20px;
+    max-width: 80%; /* Adjust the maximum width as needed */
+}
+
+.faq h2 {
+    font-family: gopher;
+    color: white;
+}
+
+/* Add hover effect for links in the FAQ section */
+.faq-item {
+    margin-bottom: 20px;
 }
