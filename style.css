@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .homepage{
@@ -112,7 +113,8 @@
     position: relative;
 }
 
-.text-container {
+.text-container,
+.text-container-features {
     position: absolute; 
     top: 50%;
     left: 0;
@@ -121,7 +123,8 @@
     width: 100%; 
     box-sizing: border-box; 
 }
-.text-container h1 {
+.text-container h1,
+.text-container-features h1 {
     margin: 0 0 20px 0;
     color: #FFF;
     font-size: 4rem;
@@ -194,19 +197,23 @@
 /*-------------------------------------------------*/
 /* Info.html styling */
 
-/*Star image and music sharing image*/
-.starimage, 
-.musicsharingimage {
-    width: 30%;
-   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-   margin-left: 100px;
-   margin-top: 100px;
+/* body background image */
+.background {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 100vh;
+    text-align: left;
+    background-image: url(featuresimage.JPG);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: top;
 }
 
-/* body background image */
-.info-page {
-    background-color: rgba(75, 19, 128, 0.699);
-    background-size: cover;
+.text-container-features {
+    text-align: center;
+    font-size: 6rem;
 }
 
 /* Footer Styles */
@@ -221,24 +228,26 @@ footer {
 /* Features Section Styles */
 .features,
 .features2 {
-    background: transparent;
+    background-color: rgb(161, 78, 239);
+    display: flex;
+    align-items: center;
     color: white;
     padding: 20px;
     margin: 20px;
-    margin-bottom: 100px;
-    width: 50%;
-    max-width: calc(100%-120px);
-    flex-direction: column;
-    position: absolute;
-    right: 0;
     top: 100px;
    
 }
 
+.features {
+    margin-top: 750px;
+}
 
-.features2 {
-    top: 600px;
-    
+/*Star image and music sharing image*/
+.features img, 
+.features2 img {
+    max-width: 40%;
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    margin-right: 20px;
 }
 
 .features h1,
@@ -268,25 +277,18 @@ body.info-page {
     align-items: flex-start; /* Align Features section to the top */
 }
 
-@media (max-width: 768px) {
-    .features {
-        max-width: 100%; /* Allow full width for smaller screens */
-    }
-}
-
 /* About Us and FAQ Sections Styles (customize for info.html) */
 
 /* Match the font used in index.html (if different) */
 .about-us {
-    background-color: mediumslateblue; /* Transparent background */
+    background-color: mediumslateblue; 
     color: white; /* Text color is white */
     padding: 20px;
     margin: 20px;
-    margin-top: 100px;
+    margin-top: 500px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     bottom: 0;
     max-width: 100%; /* Adjust the maximum width as needed */
-    min-height: 100vh;
 }
 
 .about-us h3 {
@@ -298,36 +300,39 @@ body.info-page {
     margin-top: 25px;
 }
 
+.about-us a,
+.footerlink{
+    color:gold;
+}
+
 @media (max-width: 768px) {
-    .features {
-        width: 100%; /* Allow full width for smaller screens */
-        max-width: 100%;
-        float: none;
+    .features,
+    .features2 {
+        position: static;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 20px;
+        top: auto;
+        max-width: 100%; /* Allow full width for smaller screens */
+        flex-direction: column-reverse;
     }
-    
+
+    .features img,
+    .features2 img {
+        max-width: 75%;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .features h1,
+    .features2 h2 {
+        text-align: center;
+    }
+  
     .about-us {
         position: static;
         margin-top: 20px;
         bottom: auto;
     }
-}
-
-/*Faq Section styling */
-
-.faq {
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color is white */
-    padding: 20px;
-    margin: 20px;
-    max-width: 80%; /* Adjust the maximum width as needed */
-}
-
-.faq h2 {
-    font-family: gopher;
-    color: white;
-}
-
-/* Add hover effect for links in the FAQ section */
-.faq-item {
-    margin-bottom: 20px;
 }
