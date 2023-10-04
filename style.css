@@ -208,13 +208,11 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    position: top;
 }
 
 /* Header at the top of the page styling */
 .text-container-features {
     text-align: center;
-    font-size: 6rem;
 }
 
 /* Footer Styles */
