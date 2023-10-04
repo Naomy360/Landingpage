@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .homepage{
@@ -112,7 +113,8 @@
     position: relative;
 }
 
-.text-container {
+.text-container,
+.text-container-features {
     position: absolute; 
     top: 50%;
     left: 0;
@@ -121,7 +123,8 @@
     width: 100%; 
     box-sizing: border-box; 
 }
-.text-container h1 {
+.text-container h1,
+.text-container-features h1 {
     margin: 0 0 20px 0;
     color: #FFF;
     font-size: 4rem;
@@ -192,21 +195,26 @@
 
 
 /*-------------------------------------------------*/
-/* Info.html styling */
+/* ***Info.html styling*** */
 
-/*Star image and music sharing image*/
-.starimage, 
-.musicsharingimage {
-    width: 30%;
-   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-   margin-left: 100px;
-   margin-top: 100px;
+/* Body background image styling */
+.background {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 100vh;
+    text-align: left;
+    background-image: url(./Images/featuresimage.JPG);
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: top;
 }
 
-/* body background image */
-.info-page {
-    background-color: rgba(75, 19, 128, 0.699);
-    background-size: cover;
+/* Header at the top of the page styling */
+.text-container-features {
+    text-align: center;
+    font-size: 6rem;
 }
 
 /* Footer Styles */
@@ -221,26 +229,31 @@ footer {
 /* Features Section Styles */
 .features,
 .features2 {
-    background: transparent;
+    background-color: rgb(161, 78, 239);
+    display: flex;
+    align-items: center;
     color: white;
     padding: 20px;
     margin: 20px;
-    margin-bottom: 100px;
-    width: 50%;
-    max-width: calc(100%-120px);
-    flex-direction: column;
-    position: absolute;
-    right: 0;
     top: 100px;
    
 }
 
-
-.features2 {
-    top: 600px;
-    
+/* Space adjustment to the first features section */
+.features {
+    margin-top: 750px;
 }
 
+/*Star image and music sharing image*/
+.features img, 
+.features2 img {
+    max-width: 40%;
+    /* Line below is AI-generated. I asked ChatGPT how to help boxes blend with their background better */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    margin-right: 20px;
+}
+
+/* Feature headers styling */
 .features h1,
 .features2 h2 {
     font-size: 50px;
@@ -248,18 +261,22 @@ footer {
     color: white;
 }
 
+/* First features section list styling */
 .features ul {
     font-size: 25px;
     padding-left: 20px;
     margin-top: 20px;
 }
 
+/* Second features section list styling */
 .features2 ul {
     font-size: 25px;
     padding-left: 20px;
     margin-top: 20px;
 }
-
+/* Styling of body of info page as a flexbox */
+/* This section is AI-generated. Early on in the development of the project, I asked ChatGPT how to adjust the page so that
+   the features section could be oriented better, and this is what it gave me. */
 body.info-page {
     display: flex; /* Enable flex layout for the body of the info page */
     flex-direction: column; /* Reverse the order of elements (Features on the right) */
@@ -268,66 +285,70 @@ body.info-page {
     align-items: flex-start; /* Align Features section to the top */
 }
 
-@media (max-width: 768px) {
-    .features {
-        max-width: 100%; /* Allow full width for smaller screens */
-    }
-}
-
-/* About Us and FAQ Sections Styles (customize for info.html) */
-
-/* Match the font used in index.html (if different) */
+/* About Us Styling */
 .about-us {
-    background-color: mediumslateblue; /* Transparent background */
-    color: white; /* Text color is white */
+    background-color: mediumslateblue; 
+    color: white;
     padding: 20px;
     margin: 20px;
-    margin-top: 100px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 500px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Copied from features section */
     bottom: 0;
-    max-width: 100%; /* Adjust the maximum width as needed */
-    min-height: 100vh;
+    max-width: 100%; 
 }
 
+/* About Us header styling */
 .about-us h3 {
     font-family: gopher;
     color: white; 
 }
 
+/* About us body paragraph styling */
 .about-us p {
     margin-top: 25px;
 }
 
+/* Styling for links in about us and for links in the footer (change color)*/
+.about-us a,
+.footerlink{
+    color:gold;
+}
+
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    .features {
-        width: 100%; /* Allow full width for smaller screens */
-        max-width: 100%;
-        float: none;
+    /* Reorients features and features2 sections so that the images that were previously to the left of them go to the bottom of them */
+    /* Also minor alterations to text and image placements + margins */
+    .features,
+    .features2 {
+        position: static;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 20px;
+        top: auto;
+        max-width: 100%; 
+        flex-direction: column-reverse;
     }
-    
+
+    /* Adjusts image sizes and placements */
+    .features img,
+    .features2 img {
+        max-width: 75%;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    /* Centers features + features2 headers */
+    .features h1,
+    .features2 h2 {
+        text-align: center;
+    }
+
+    /* Decreases margins for about us section. They were larger for the larger screens for the sake of distinguishing 
+        the about us section when navigated to it by the "our team" link in the nav bar */
     .about-us {
         position: static;
         margin-top: 20px;
         bottom: auto;
     }
-}
-
-/*Faq Section styling */
-
-.faq {
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color is white */
-    padding: 20px;
-    margin: 20px;
-    max-width: 80%; /* Adjust the maximum width as needed */
-}
-
-.faq h2 {
-    font-family: gopher;
-    color: white;
-}
-
-/* Add hover effect for links in the FAQ section */
-.faq-item {
-    margin-bottom: 20px;
 }
