@@ -105,7 +105,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/background.JPG);
+    background-image: url(./Images/background.jpg);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
