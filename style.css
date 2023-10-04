@@ -203,7 +203,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/featuresimage.jpg);
+    background-image: url(./Images/featuresimage.webp);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
