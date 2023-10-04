@@ -105,7 +105,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/background.jpg);
+    background-image: url(./Images/background.JPG);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -203,7 +203,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/featuresimage.JPG);
+    background-image: url(./Images/featuresimage.jpg);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
