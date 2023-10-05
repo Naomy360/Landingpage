@@ -211,8 +211,7 @@
 }
 /*Pricing info image*/
 .image1{
-    height: auto; /*image height to auto*/
-    max-width: 100%;
+    width: auto;
     max-height: 100vh;
 }
 /*Adjustment for the home section when displayed on smaller devices*/
