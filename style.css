@@ -392,6 +392,9 @@ body.info-page {
         max-width: 100%; 
         flex-direction: column-reverse;
     }
+    .features {
+        margin-top: 750px;
+    }
 
     /* Adjusts image sizes and placements */
     .features img,
