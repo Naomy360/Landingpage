@@ -1,6 +1,6 @@
 # FavTune 
 
-A simple landing page for a music rating website called FavTune created using HTML and CSS. The two contributors are Naomy Chepngeno Chesengeny and Jackson McAvoy.
+A simple landing page for a music rating website called FavTune created using HTML and CSS. The two contributors are Naomy Chepngeno Chesengeny and Jackson McAvoy. Work Split: 50/50.
 
 
 
