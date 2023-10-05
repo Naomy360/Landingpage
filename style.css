@@ -274,7 +274,8 @@ footer {
 }
 /* Styling of body of info page as a flexbox */
 /* This section is AI-generated. Early on in the development of the project, I asked ChatGPT how to adjust the page so that
-   the features section could be oriented better, and this is what it gave me. */
+   the features section could be oriented better and the content of the page could fit properly, and this was one thing it suggested to do. */
+/* (OpenAI, 2023) */
 body.info-page {
     display: flex; /* Enable flex layout for the body of the info page */
     flex-direction: column; /* Reverse the order of elements (Features on the right) */

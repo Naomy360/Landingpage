@@ -25,3 +25,6 @@ A simple landing page for a music rating website called FavTune created using HT
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Reference
+OpenAI. (September, 2023). ChatGPT (Version GPT-3.5). Retrieved from [https://www.openai.com/]
