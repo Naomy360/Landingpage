@@ -351,8 +351,8 @@ body.info-page {
 
 /* About Us Styling */
 .about-us {
-    background-color: mediumslateblue; 
-    color: white;
+    background-color:rgb(0, 0, 230);
+    color: rgb(255, 255, 255);
     padding: 20px;
     margin: 20px;
     margin-top: 500px;
