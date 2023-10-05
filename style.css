@@ -100,6 +100,7 @@
     align-items: center;
     padding: 10px;
     width: 100%;
+    z-index: 2;
 }
 /*The hamburger icon with drop down menu, set to none to be displayed only on small devices*/
 .toggle-menu {
@@ -246,6 +247,13 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/* Ensures header is behind the nav bar */
+.background h1 {
+    position: relative;
+    z-index: 1;
+}
+
 /*text container on the home-section(index.html) and text-container-features(info.html) containing name of the app*/
 .text-container,
 .text-container-features {
