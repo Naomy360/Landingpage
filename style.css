@@ -1,9 +1,11 @@
+/*For consistent layout*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/*This is to style the header of FAQ section of the index.html. This was one of the last elemts I added which is why it is at the top*/
 .h3 {
     font-size: 2.5em;
     color: rgba(75, 19, 128, 0.699);
@@ -11,37 +13,41 @@
     margin-bottom: 20px;
 }
 
-.content-wrapper {
+/*This is to style the div container of the FAQ section containing both the text container and the iframr.Initially It displayed both the text container and the iframe side to side even on a small screen and this made the text unreadable. I consulted chat gpt on the use of flex to align the items and it suggested the use of flex-direction. I then tried both column and row directions before deciding on row and flex-drection column for small devices */
+.contentp3 {
     background-color: #B9D9EB;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    
 }
+/*This is to style the text container in the FAQ section*/
 
+/*Iframe 1 is the div container containing the iframe, iframe2 is the iframe itself.They are both inside contentp3. The flex style is to allow them to shrink and expand equally on the page depending on space available. T*/
+.iframe1,
 .text-contain {
     flex: 1;
+}
+/*Align the text at the center and adds a little padding to the right*/
+.text-contain {
     text-align: center;
     padding-right: 2%; 
 }
-
-.iframe-container {
-    flex: 1;
-}
-
+/*Styles the iframe container and the text container in the FAQ section by adding padding and */
 .text-contain,
-.responsive-iframe {
-    padding-top: 5vh; 
+.iframe2 {
+    padding-top: 20vh; 
     padding-left: 5vw; 
     width: 100%; 
     max-width: 550px; 
- 
-}
 
-.responsive-iframe{
-    height: 70vh;
 }
+/*Height of the iframe*/
+.iframe2{
+    height: 80vh;
 
+}
+/*style of the paragraph within text-contain*/
 .p3 {
     font-size: 1.2em;
     color: rgba(75, 19, 128, 0.699);
@@ -51,10 +57,10 @@
 
 
 
-
+/*Adjustment for smaller screens*/
 @media (max-width: 768px) {
     .text-contain,
-    .responsive-iframe {
+    .iframe2 {
         padding-left: 5%;
         padding-right: 5%;
         height: 50vh;
@@ -65,18 +71,18 @@
         overflow-y: auto;
     }
 
-    .content-wrapper {
+    .contentp3 {
         flex-direction: column;
     }
-
-    .responsive-iframe {
+/*iframe styling*/
+    .iframe2 {
         display: flex;
         justify-content: center; 
         align-items: center;     
         height: 50vh; 
-                 
+                
     }
-
+/*Heading and paragraph of the FAQ section*/
     .h3, .p3 {
         font-size: 1.5em;
     }
@@ -84,7 +90,7 @@
 
 
 
-
+/*Navigation bar on index.html*/
 
 .navigationbar {
     background-color:rgba(75, 19, 128, 0.699);
@@ -95,54 +101,47 @@
     padding: 10px;
     width: 100%;
 }
-
-.homepage{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-
-}
-
+/*The hamburger icon with drop down menu, set to none to be displayed only on small devices*/
 .toggle-menu {
     display: none;
 }
-
+/*The name of the app on the navigation bar*/
 .appname{
     font-size: 50px;
     font-family: gopher;
 }
-
+/*Hovering over items in menu changes curser to pointer*/
 .menu {
     cursor: pointer;
     display: none;
 }
-
+/*Hamburger icon styling*/
 .menu-line {
     width: 20px;
     height: 3px;
     background-color: white;
     margin-bottom: 4px;
 }
-
+/*navigation links in the navigation bar*/
 .navlinks {
     list-style-type: none;
     display: flex;
 }
-
+/*padding for individual items in the navlinks*/
 .navlinks li {
     padding: 0 10px;
 }
-
+/*Navigation bar items text color change (before)*/
 .navigationbar a {
     color:white;
     text-decoration: none;
     font-size: 20px;
 }
-
+/*Navigation bar items text color change(after) */
 .navigationbar a:hover {
     color:#099d02;
 }
-
+/*Adjustment for smaller devices*/
 @media (max-width: 768px) {
     .navigationbar {
         flex-direction: column;
@@ -157,6 +156,7 @@
     .navlinks li {
         padding: 10px 0;  
     }
+    /*I consulted chatgpt on how to set the display for the hamburger dropdown menu for smaller devices. Initially, when i tried to display it nothing would appear on the dropdown menu*/
     .toggle-menu:checked + .menu + .navlinks {
         display: block;
         min-height: 100vh;
@@ -169,7 +169,7 @@
 
 
 
-
+/*Adjustment for smaller devices*/
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
@@ -179,7 +179,7 @@
         flex: 1; 
     }
 }
-
+/*Background image of the first section of the landing page*/
 .background-image {
     flex-grow: 1;
     width: 100%;
@@ -193,29 +193,13 @@
     position: relative;
 }
 
-.text-container,
-.text-container-features {
-    position: absolute; 
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding: 0 15px; 
-    width: 100%; 
-    box-sizing: border-box; 
-}
-.text-container h1,
-.text-container-features h1 {
-    margin: 0 0 20px 0;
-    color: #FFF;
-    font-size: 4rem;
-}
-
+/*Text container of the home section below the navigation bar.*/
 .text-container p {
     color: #FFF;
     font-size: 2rem;
 }
 
-
+/*The price information section*/
 .pricing{
     background-color:  rgba(75, 19, 128, 0.699);
     display: flex;
@@ -225,39 +209,12 @@
     max-width: 100;
     
 }
-
-.imbed{
-    background-color: #B9D9EB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    max-width: 100;
-    min-height: 100vh;
-    overflow: hidden;
-    
-}
-
+/*Pricing info image*/
 .image1{
     max-width: 100%;
     max-height: 100vh;
 }
-
-
-
-
-.FAQ-container {
-    text-align: center;  
-}
-
-.FAQ-container iframe {
-    display: inline-block;
-    width: 480px;
-    height: 284.5px;
-    margin: 30px 0;  
-}
-
-
+/*Adjustment for the home section when displayed on smaller devices*/
 @media only screen and (max-width: 768px) { 
     .background-image {
         min-height: 100vh;
@@ -269,7 +226,7 @@
     .text-container p {
         font-size: 1.5rem;
     }
-   
+
 }
 
 
@@ -288,6 +245,25 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+}
+/*text container on the home-section(index.html) and text-container-features(info.html) containing name of the app*/
+.text-container,
+.text-container-features {
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0 15px; 
+    width: 100%; 
+    box-sizing: border-box; 
+
+}
+
+.text-container h1,
+.text-container-features h1 {
+    margin: 0 0 20px 0;
+    color: #FFF;
+    font-size: 4rem;
 }
 
 /* Header at the top of the page styling */
@@ -314,13 +290,14 @@ footer {
     padding: 20px;
     margin: 20px;
     top: 100px;
-   
+    
 }
 
 /* Space adjustment to the first features section */
 .features {
-    margin-top: 750px;
+    margin-top: 650px;
 }
+
 
 /*Star image and music sharing image*/
 .features img, 
@@ -337,6 +314,7 @@ footer {
     font-size: 50px;
     font-family: gopher;
     color: white;
+
 }
 
 /* First features section list styling */
@@ -352,6 +330,12 @@ footer {
     padding-left: 20px;
     margin-top: 20px;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;  
+}
+
 /* Styling of body of info page as a flexbox */
 /* This section is AI-generated. Early on in the development of the project, I asked ChatGPT how to adjust the page so that
    the features section could be oriented better and the content of the page could fit properly, and this was one thing it suggested to do. */
