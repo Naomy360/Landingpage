@@ -15,7 +15,7 @@
 
 /*This is to style the div container of the FAQ section containing both the text container and the iframr.Initially It displayed both the text container and the iframe side to side even on a small screen and this made the text unreadable. I consulted chat gpt on the use of flex to align the items and it suggested the use of flex-direction. I then tried both column and row directions before deciding on row and flex-drection column for small devices */
 .contentp3 {
-    background-color: #B9D9EB;
+    background-color: rgb(161, 203, 227);
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -50,7 +50,7 @@
 /*style of the paragraph within text-contain*/
 .p3 {
     font-size: 1.2em;
-    color: rgba(75, 19, 128, 0.699);
+    color: rgb(75, 19, 128);
     line-height: 1.5;
     margin-bottom: 20px;
 }
