@@ -303,6 +303,7 @@ footer {
 .features img, 
 .features2 img {
     max-width: 40%;
+    height: auto;
     /* Line below is AI-generated. I asked ChatGPT how to help boxes blend with their background better */
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
     margin-right: 20px;
@@ -400,6 +401,7 @@ body.info-page {
     .features img,
     .features2 img {
         max-width: 75%;
+        height: auto;
         margin-top: 50px;
         margin-bottom: 100px;
     }
