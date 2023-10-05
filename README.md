@@ -6,18 +6,28 @@ A simple landing page for a music rating website called FavTune created using HT
 
 ## Features
  
-[] Lets the user know they can review ,rate and discuss songs with other via the web app
+[] Lets the user know that they can review, rate and discuss songs with other via the web app
 
-[] Has pricing info
+[] Pricing Info
 
-[]Mockups, testimonials and upcoming features
+[] Mockups
+
+[] Information about creators
+
+[] Navigation bar
+
+[] Footer
+
 
 ## Repository and purpose of the code
 
--
+- Image directory holds all images used for landing page
+- index.html provides the content for the main landing page. It can link to info.html through the nav bar
+- info.html provides the content for the info page, including "features," "about us," and the footer
+- style.css performs the styling for info.html and index.html
 
 ## How to run the code
--
+- The code can be run locally in the browser: https://naomy360.github.io/Landingpage/
 
 
 
