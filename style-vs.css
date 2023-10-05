@@ -185,7 +185,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/background.webp);
+    background-image: url(./Images/background_c.webp);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -240,7 +240,7 @@
     width: 100%;
     min-height: 100vh;
     text-align: left;
-    background-image: url(./Images/featuresimage.webp);
+    background-image: url(./Images/featuresimage_c.webp);
     background-size:cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
