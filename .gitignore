@@ -1,0 +1,6 @@
+#Ignore MacOS .DS_store files
+
+.DS_store
+
+**/.DS_Store
+
