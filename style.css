@@ -156,7 +156,7 @@
     .navlinks li {
         padding: 10px 0;  
     }
-    /*I consulted chatgpt on how to set the display for the hamburger dropdown menu for smaller devices. Initially, when i tried to display it nothing would appear on the dropdown menu*/
+    /*Initially, when i tried to display it nothing would appear on the dropdown menuI consulted chatgpt on how to set the display for the hamburger dropdown menu for smaller devices. */
     .toggle-menu:checked + .menu + .navlinks {
         display: block;
         min-height: 100vh;
